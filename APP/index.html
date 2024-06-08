@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Pets in U.S.</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://fonts.googleapis.com/css?family=Barlow:400,500,700" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://d3js.org/d3.v4.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/d3-simple-slider@1.5.5/dist/d3-simple-slider.min.js"></script>
+  <script src="script.js" defer></script>
+  <script src="backend.py" defer></script>
+</head>
+
+<body>
+  <h1>CV. BALI RASPBERRY</h1>
+  <p class="text">CV. Bali Raspberry adalah sebuah perusahaan yang bergerak di bidang agribisnis dan berfokus pada budidaya serta penjualan buah raspberry berkualitas tinggi.</p>
+
+  <div id="plot"></div>
+
+    <script>
+        // Ambil data dari backend Flask
+        fetch('/data')
+            .then(response => response.json())
+            .then(data => {
+                // Buat visualisasi K-means
+                // Gunakan data dari MongoDB untuk membuat visualisasi
+                // Anda dapat menggunakan kode JavaScript Anda sebelumnya di sini
+            })
+            .catch(error => console.error('Error fetching data:', error));
+    </script>
+  <!-- <div class="container pieContainer">
+    <h2>Choose Algorithm:</h2>
+    <form class="sortSelect">
+        <label>
+            <input type="radio" name="sortChart" id="number" value="number" class="sortChart" checked="true">K-MEANS</label>
+        <br/>
+        <label>
+            <input type="radio" name="sortChart" id="alpha" value="alpha" class="sortChart">DBSCAN</label>
+    </form>
+  </div>
+  <div id="plot"></div> -->
+
+  <!-- <div class="container stackContainer">
+    <h2>Number of Households:
+      <span>(millions)</span>
+    </h2>
+  </div>
+  <div class="container barContainer"></div> -->
+
+  <div class="order-form-container">
+    <h2>Order Form</h2>
+    <form>
+      <div class="input-group">
+        <label for="date">Date</label>
+        <input type="date" id="date" name="date">
+      </div>
+      <div class="input-group">
+        <label for="customer">Customer</label>
+        <input type="text" id="customer" name="customer">
+      </div>
+      <div class="input-group">
+        <label for="brbkj">Choose BR/BKJ</label>
+        <select id="brbkj" name="brbkj">
+          <option value="br">BR</option>
+          <option value="bkj">BKJ</option>
+        </select>
+      </div>
+      <div class="input-group">
+        <label for="product">Choose Product</label>
+        <select id="product" name="product">
+          <option value="raspberry">Raspberry</option>
+          <option value="blueberry">Blueberry</option>
+          <option value="frozen_raspberry">Frozen Raspberry</option>
+          <option value="cape_gooseberry">Cape Gooseberry</option>
+          <option value="tea">Tea</option>
+          <option value="jam">Jam</option>
+        </select>
+      </div>
+      <div class="input-group">
+        <label for="quantity">Quantity</label>
+        <input type="number" id="quantity" name="quantity">
+      </div>
+      <div class="input-group">
+        <label for="invoice_number">Invoice Number</label>
+        <input type="text" id="invoice_number" name="invoice_number">
+      </div>
+      <div class="input-group">
+        <label for="price">Price</label>
+        <input type="number" id="price" name="price" step="0.01">
+      </div>
+      <div class="input-group">
+        <label for="total_price">Total Price</label>
+        <input type="number" id="total_price" name="total_price" step="0.01">
+      </div>
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+
+</body>
+</html>
